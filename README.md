@@ -1,5 +1,8 @@
 # stream-handbook
 
+이 문서는 아래 원문을 번역한 것이다.
+https://github.com/substack/stream-handbook
+
 이 문서는 [streams](http://nodejs.org/docs/latest/api/stream.html)  [node.js](http://nodejs.org/) 로 작성하기 위한 기본적인 내용을 다룬다. 
 
 # node packaged manuscript
@@ -39,12 +42,12 @@ npm install -g stream-handbook
 
 # why you should use streams
 
-Node 에서 I/O  는 비동기로 처리된다. 그래서 디스크나 네트워크를 통한 인터렉션에서는 함수에 콜백을 전달해야 한다.
+Node 에서 I/O  는 비동기로 처리된다. 따라서 디스크나 네트워크를 통한 인터렉션에서는 함수에 콜백을 전달해야 한다.
 디스크에서 파일을 서비스하는 경우 아래와 같은 코드를 작성할 수도 있다.
 
 ``` js
 var http = require('http');
-var fs = require('fs');
+var fs = require('fs');서
 
 var server = http.createServer(function (req, res) {
     fs.readFile(__dirname + '/data.txt', function (err, data) {
